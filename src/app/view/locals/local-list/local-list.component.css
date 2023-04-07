@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --color-default:#004f83;
+  --color-second:#0067ac;
+  --color-three:#73bdff3d;
+  --color-white:#fff;
+  --color-body:#e4e9f7;
+  --color-light:#e0e0e0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/*----Search Bar----*/
+.container-search{
+  padding: 10px 5px 20px;
+}
+
+.container-search .form{
+  position: relative;
+}
+
+.container-search .form .fa-search{
+  position: absolute;
+  top:13px;
+  left: 20px;
+  color: #9ca3af;
+
+}
+
+.container-search .form span{
+  position: absolute;
+  right: 17px;
+  top: 13px;
+  padding: 2px;
+  border-left: 1px solid #d1d5db;
+}
+
+.container-search .form-input{
+  height: 45px;
+  text-indent: 33px;
+  border-radius: 10px;
+}
+
+.container-search .form-input:focus{
+  box-shadow: none;
+  border: solid 2px rgba(0,79,131,40%);
+}
+/*----Search Bar----*/
+
+/*----Infos Table----*/
+.container .card-header{
+  text-align: center;
+  background: #0067ac;
+  color: white;
+}
+.container .card{
+  overflow: scroll;
+}
+.container{
+  padding: 0 40px;
+  max-height: 82vh;
+  overflow: scroll;
+}
+.container .card-body{
+  padding:0;
+  text-align: center;
+}
+.table{
+  border-collapse: collapse;
+}
+
+.table thead{
+  background-color: #0067ac;
+  color: white;
+}
+.table tbody{
+  background-color:#73bdff3d;
+  color: white;
+  overflow: hidden;
+}
+.table thead th,
+.table tbody tr td{
+  height: 50px;
+  vertical-align: middle;
+  border-left: solid 1px white;
+}
+.table tbody tr{
+  color: black;
+  border-color: white;
+}
+
+.table thead th:last-child,
+.table tbody tr:last-child td{
+  border-right: solid 1px white;
+}

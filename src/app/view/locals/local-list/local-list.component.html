@@ -1,0 +1,52 @@
+<!--Search Bar -Start- -->
+
+<div class="container-search">
+
+  <div class="row height d-flex justify-content-center align-items-center">
+
+    <div class="col-md-6">
+
+      <div class="form">
+
+        <input type="text" class="form-control form-input" name ="search" placeholder="Search by CIN , CATEGORIE LOCAL or REFERENCE" [(ngModel)]="searchText">
+        <i class="fa fa-search"></i>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--Search Bar -End- -->
+
+<div class="container d-flex justify-content-around" style="margin:0;">
+  <div class="col-md-4">
+    <app-local-create></app-local-create>
+  </div>
+  <div class="card col-md-6">
+    <div class="card-header"> Liste des Redevables</div>
+    <div class="card-body">
+      <table class="table  table-bordered   "> <!--*ngIf="redevables.length != 0"-->
+        <thead>
+        <th>CIN</th>
+        <th>Reference</th>
+        <th>Categorie Local</th>
+        <th>Dernier Annee Payee</th>
+        <th>Dernier Trimestre Payee</th>
+        </thead>
+        <tbody >
+        <tr *ngFor="let l of locals | filter:searchText" >
+          <td>{{l.cin}}</td>
+          <td>{{l.ref}}</td>
+          <td>{{l.categorieLocalName}}</td>
+          <td>{{l.dernierAnneePayee}}</td>
+          <td>{{l.dernierTrimestrePayee}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
