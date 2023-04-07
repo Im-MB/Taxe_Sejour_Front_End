@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --color-default:#004f83;
+  --color-second:#0067ac;
+  --color-three:#73bdff3d;
+  --color-white:#fff;
+  --color-body:#e4e9f7;
+  --color-light:#e0e0e0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/*----Search Bar----*/
+.container-search{
+  padding: 10px 5px 20px;
+}
+
+.container-search .form{
+  position: relative;
+}
+
+.container-search .form .fa-search{
+  position: absolute;
+  top:13px;
+  left: 20px;
+  color: #9ca3af;
+
+}
+
+.container-search .form span{
+  position: absolute;
+  right: 17px;
+  top: 13px;
+  padding: 2px;
+  border-left: 1px solid #d1d5db;
+}
+
+.container-search .form-input{
+  height: 45px;
+  text-indent: 33px;
+  border-radius: 10px;
+}
+
+.container-search .form-input:focus{
+  box-shadow: none;
+  border: solid 2px rgba(0,79,131,40%);
+}
+/*----Search Bar----*/
+
+/*----Infos Table----*/
+.container-table{
+  padding: 0 40px;
+  max-height: 82vh;
+  overflow: scroll;
+}
+.table{
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table thead{
+  background-color: #0067ac;
+  color: white;
+}
+.table tbody{
+  background-color:#73bdff3d;
+  color: white;
+  overflow: hidden;
+}
+.table thead tr th,
+.table tbody tr td{
+  height: 50px;
+  vertical-align: middle;
+}
+.table .update-btn{
+  background-color: #4ea960;
+  border: solid 1px #4ea960;
+  color: white;
+  border-radius: 10px;
+}
+.table .update-btn:hover{
+  background-color: #327241;
+  border: solid 1px #327241;
+}
+.table tbody tr{
+  color: black;
+  border-color: white;
+}
+/*----Infos Table----*/
+
+/*-----Tax Payment----*/
+.container-btn{
+  position: absolute;
+  bottom: 0;
+}
+.container-btn .btn{
+  background-color: #73bdff3d;
+  display: flex;
+  justify-content: flex-end;
+  height: 60px;
+  border-radius: 0;
+}
+.container-btn .payment-btn{
+  background-color: #004f83;
+  color: white;
+  border: solid 2px #004f83;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+
+.container-btn .payment-btn:hover{
+  background-color: white;
+  color: #004f83;
+  border: solid 2px #004f83;
+  border-radius: 8px;
+}
+/*-----Tax Payment----*/
+
+
+/*-----Payment Form----*/
+.closeIcon{
+  position:absolute;
+  top: 0;
+  right: 15px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.closeIcon:hover{
+  color: #333333;
+}
+.bg-modal{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: none;
+  align-items: center;
+}
+.bg-modal .modal-content{
+  display: flex;
+  align-items: center;
+}
+
+.bg-modal .modal-content .card-header{
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 0;
+  color: #333;
+  font-weight: 900;
+}
+.bg-modal .modal-content .card-footer{
+  background-color: #fff;
+  text-align: center;
+}
+
+
+.bg-modal .modal-content .card-footer .btn{
+  background: #004f83;
+  transition: all .4s;
+  color: #fff;
+  border: solid 2px #004f83;
+}
+
+.bg-modal .modal-content .card-footer .btn:hover{
+  color: #004f83;
+  background: #fff;
+  border: solid 2px #004f83;
+  cursor: pointer;
+}
+
+.bg-modal .modal-content .card-footer .btn span {
+  margin: 20px;
+
+}
+
+.bg-modal .modal-content .card-footer .btn:hover span i{
+  position: relative;
+  left: 6px;
+}
+
+.bg-modal .modal-content .form-group{
+  border-bottom: 2px solid #d9d9d9;
+  margin-bottom: 4px;
+}
+
+.bg-modal .modal-content .form-group label{
+  font-size: 13px;
+  color: #333;
+  padding-left: 10px;
+}
+
+.bg-modal .modal-content .form-group input{
+  box-shadow: none;
+  border: none;
+}
+
+
+.bg-modal .modal-content .form-group:nth-child(1) .focus-input100{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  z-index: 99;
+  background-color: #004f83;
+  transition: all .4s;
+}
+
+.bg-modal .modal-content .form-group:nth-child(2) .focus-input100{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  z-index: 99;
+  background-color: #004f83;
+  transition: all .4s;
+}
+.bg-modal .modal-content .form-group:nth-child(3) .focus-input100{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  z-index: 99;
+  background-color: #004f83;
+  transition: all .4s;
+}
+.bg-modal .modal-content .form-group:nth-child(4) .focus-input100{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  z-index: 99;
+  background-color: #004f83;
+  transition: all .4s;
+}
+.bg-modal .modal-content .form-group:nth-child(5) .focus-input100{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  z-index: 99;
+  background-color: #004f83;
+  transition: all .4s;}
+.bg-modal .modal-content .form-group:nth-child(6) .focus-input100{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  z-index: 99;
+  background-color: #004f83;
+  transition: all .4s;
+}
+.bg-modal .modal-content .form-group:nth-child(7) .focus-input100{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  z-index: 99;
+  background-color: #004f83;
+  transition: all .4s;
+}
+
+
+.bg-modal .modal-content .form-group input:focus+.focus-input100{
+  width: 100%;
+}
+.bg-modal .modal-content .input{
+  position: relative;
+}
+/*-----Payment Form----*/
+
+/*----- Pdf Download -start- ----*/
+.container-allInfos{
+  display: none;
+  padding: 0 20px;
+  background-color: white;
+  position: relative;
+}
+
+.container-allInfos .header-info{
+  margin: 2px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.tablee{
+  padding: 5px 0;
+  border-collapse: collapse;
+  border-radius: 12px;
+  width:100%;
+}
+.simpleTableInfo .head{
+  text-align: center;
+  width: 100%;
+  color: black;
+  background-color: white;
+  border: 1.65px solid ;
+  border-bottom: 0;
+}
+.simpleTableInfo{
+  margin: 8px;
+}
+.simpleTableInfo tbody{
+  color: black;
+  background-color: white;
+}
+
+.simpleTableInfo tbody tr td{
+  border: solid 1.67px;
+}
+
+.simpleTableInfo tbody tr td:nth-child(1){
+  border-bottom: solid 1.65px;
+}
+
+.headers{
+  text-align: center;
+}
+.headers .infos{
+  border-bottom: dashed 1.67px;
+  border-top: dashed 1.67px;
+}
+.headers p:nth-child(2){
+  margin-bottom: 10.5px;
+}
+
+.container-allInfos .remove{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 20px;
+}
+/*----- Pdf Download -End- ----*/
+
+
+

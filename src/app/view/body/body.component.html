@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/3b00e4640b.js" crossorigin="anonymous"></script>
+  <title>Taxe Sejour</title>
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bx-detail icon"></i>
+      <div class="logo_name">Taxe Sejour</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <!--Dashboard-->
+    <ul class="nav-list">
+      <li>
+        <a  routerLink="">
+          <i class="bx bx-grid-alt"></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+    <!--Dashboard-->
+    <!--Redevable-->
+      <li>
+        <a  routerLink="redevable">
+          <i class="bx bx-user"></i>
+          <span class="link_name">Redevable</span>
+        </a>
+        <span class="tooltip">Redevable</span>
+      </li>
+    <!--Redevable-->
+    <!--Local-->
+      <li>
+        <a routerLink="local">
+          <i class="bx bx-home"></i>
+          <span class="link_name">Local</span>
+        </a>
+        <span class="tooltip">Local</span>
+      </li>
+    <!--Local-->
+    <!--Taxe Trimestre-->
+      <li>
+        <a >
+          <i class='bx bx-calendar-week' ></i>
+          <span class="link_name">Taxe Trimestre</span>
+        </a>
+        <span class="tooltip">Taxe Trimestre</span>
+      </li>
+    <!--Taxe Trimestre-->
+    <!--Taxe Annuelle-->
+      <li>
+        <a  routerLink="taxeAnnuelle">
+          <i class='bx bx-calendar' ></i>
+          <span class="link_name">Taxe Annuelle</span>
+        </a>
+        <span class="tooltip">Taxe Annuelle</span>
+      </li>
+    <!--Taxe Annuelle-->
+
+    <!--Notification-->
+      <li>
+        <a routerLink="notificationLocal">
+          <i class='bx bx-bell' ></i>
+          <span class="link_name">Notification</span>
+        </a>
+        <span class="tooltip">Notification</span>
+      </li>
+    <!--Notification-->
+
+    <!--Profile-->
+      <li class="profile">
+        <div class="profile_details">
+          <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" class="profile image">
+          <div class="profile_content">
+            <div class="name">Mehdi</div>
+            <div class="designation">Admin</div>
+          </div>
+        </div>
+        <i class="bx bx-log-out" id="log_out"></i>
+      </li>
+    <!--Profile-->
+    </ul>
+  </div>
+
+  <section class="home-section">
+    <!--Routing Pages-->
+    <router-outlet></router-outlet>
+    <!--Routing Pages-->
+  </section>
+
+
+</body>
+</html>

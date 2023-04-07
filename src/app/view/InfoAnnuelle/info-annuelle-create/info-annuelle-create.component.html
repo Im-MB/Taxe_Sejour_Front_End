@@ -1,0 +1,221 @@
+
+<!--Search Bar -Start- -->
+
+<div class="container-search">
+
+  <div class="row height d-flex justify-content-center align-items-center">
+
+    <div class="col-md-6">
+
+      <div class="form">
+
+        <input type="text" class="form-control form-input" name ="search" placeholder="Search By Cin" [(ngModel)]="searchText">
+        <i class="fa fa-search"></i>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--Search Bar -End- -->
+
+<!--Table Info -Start- -->
+<section class="container-table d-flex justify-content-between">
+  <div class="col-md-5 col-sm-12">
+  <table class="table  ">
+    <thead>
+      <tr>
+        <th>Reference</th>
+        <th>Nom && Cin</th>
+        <th>Annee</th>
+        <th>Majoration</th>
+        <th>Total</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let aInfo of taxeInfos | filter:searchText">
+        <td>{{aInfo.ref}}</td>
+        <td>{{aInfo.redevable.nom}} | {{aInfo.redevable.cin}}</td>
+        <td>{{aInfo.annee}}</td>
+        <td>{{aInfo.majoration}}</td>
+        <td>{{aInfo.total}}</td>
+        <td><button class="update-btn" (click)="showDetails(aInfo);displayInfo()">Details</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <!--Redevable All Infos -Start- -->
+  <span class="infoText" style="background: #e4e9f7;height: 82%;width: 39.2%;position: absolute;right: 40px;">
+      <span style="position: absolute;height: 5px;width: 100px;background: #004f83;"></span>
+      <span style="position: absolute;height: 100px;width: 5px;background: #004f83;"></span>
+      <span style="display: flex;justify-content: center;"><span style="position: absolute;top: 42%;font-size: 35px;padding: 0 40px 0 40px;color: #004f83;font-weight: bold;" >All Infos Will Be <br> Displayed Here</span></span>
+      <span style="position: absolute;height: 5px;width: 100px;background: #004f83;bottom: 0;right: 0;"></span>
+      <span style="position: absolute;height: 100px;width: 5px;background: #004f83;bottom: 0;right: 0;"></span>
+    </span>
+  <div class="container-allInfos col-md-5 col-sm-12" id="container-allInfos">
+    <div class="header-info " style="border-bottom: solid 2px;" id="header-info">Tax Information</div>
+    <div class="remove" (click)="removeInfo()" id="remove" >X</div>
+    <div class="allInfos" id="allInfos" >
+      <div *ngIf="selectedInfo">
+        <div class="headers">
+          <p>Reference :</p>
+          <p class="infos">{{ selectedInfo.ref }}</p>
+        </div>
+
+        <div class="simpleTableInfo">
+          <div class="head">Redevable :</div>
+          <table class="tablee">
+            <tbody>
+              <tr>
+                <td><p>CIN: </p><p>{{ selectedInfo.redevable.cin }} </p></td>
+                <td><p>Nom: </p><p>{{ selectedInfo.redevable.nom }} </p></td>
+                <td><p>Prenom: </p><p>{{ selectedInfo.redevable.prenom }} </p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <div class="headers">
+          <p>Annee :</p>
+          <p class="infos">{{ selectedInfo.annee }}</p>
+        </div>
+
+        <div class="simpleTableInfo">
+          <div class="head">Local :</div>
+          <table class="tablee">
+            <tbody>
+            <tr>
+              <td><p>Name: </p><p>{{ selectedInfo.categorieLocal.name }} </p></td>
+              <td><p>Code: </p><p>{{ selectedInfo.categorieLocal.code }} </p></td>
+              <td><p>Libelle: </p><p>{{ selectedInfo.categorieLocal.libelle }} </p></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="chiffreInfos" *ngFor="let aInfoo of annuelleInfos">
+          <div class="headers"  *ngIf=" selectedInfo.ref === aInfoo.ref">
+            <p>Chiffre D'Affaire :</p>
+            <p class="infos">{{ aInfoo.ref }}</p>
+          </div>
+        </div>
+        <div class="headers">
+          <p>Majoration :</p>
+          <p class="infos">{{ selectedInfo.majoration }}</p>
+        </div>
+        <div class="headers">
+          <p>Total :</p>
+          <p class="infos">{{ selectedInfo.total }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--Redevable All Infos -End- -->
+
+</section>
+
+<!--Table Info -End- -->
+
+<!--Footer Tax Payment -Start- -->
+<div class="container-btn col-12">
+  <div class="btn">
+    <button class="payment-btn" (click)="add_Payment_btn()">Nouvelle Taxe</button>
+  </div>
+</div>
+<!--Footer Tax Payment -End- -->
+
+<!--Payment form -Start- -->
+<div class="bg-modal">
+  <div class="modal-content">
+
+    <div class="card col-md-5">
+      <div class="closeIcon">x</div>
+      <div class="card-header addinfo" id="upOrNew">Nouvelle Taxe</div>
+      <div class="card-body">
+
+        <div class="form-group">
+          <label for="cin">CIN</label>
+          <div class="input">
+            <input id="cin" type="text" class="form-control" [(ngModel)]="annuelle.cin">
+            <span class="focus-input100"></span>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="ref">Reference</label>
+          <div class="input">
+            <input id="ref" type="text" class="form-control" [(ngModel)]="annuelle.ref">
+            <span class="focus-input100"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="referenceLocal">Local Reference</label>
+          <div class="input">
+            <input id="referenceLocal" type="text" class="form-control" [(ngModel)]="annuelle.referenceLocal">
+            <span class="focus-input100"></span>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="categorieLocalName">Categorie Name Local</label>
+          <div class="input">
+            <input id="categorieLocalName" type="text" class="form-control" [(ngModel)]="annuelle.categorieLocalName">
+            <span class="focus-input100"></span>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="annee">Year</label>
+          <div class="input">
+            <input id="annee" type="text" class="form-control" [(ngModel)]="annuelle.annee">
+            <span class="focus-input100"></span>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="datePresentation">Presentation Day</label>
+          <div class="input">
+            <input id="datePresentation" type="text" class="form-control" [(ngModel)]="annuelle.datePresentation" placeholder="dd/mm/yyyy">
+            <span class="focus-input100"></span>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="chiffreAffaire">Chiffre Affaire</label>
+          <div class="input">
+            <input id="chiffreAffaire" type="text" class="form-control" [(ngModel)]="annuelle.chiffreAffaire">
+            <span class="focus-input100"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button class="btn" (click)="save();payement(annuelle)" >
+          <span>
+            Submit
+            <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Payment form -End- -->
+
+
+
+
+
