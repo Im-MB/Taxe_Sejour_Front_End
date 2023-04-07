@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --color-default:#004f83;
+  --color-second:#0067ac;
+  --color-three:#73bdff3d;
+  --color-white:#fff;
+  --color-body:#e4e9f7;
+  --color-light:#e0e0e0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/*----Infos Table----*/
+.container .card{
+  background: white;
+  width: 60%;
+  overflow: scroll;
+}
+.container .card-header{
+  text-align: center;
+  background: #0067ac;
+  color: white;
+}
+.container{
+  padding: 50px 0 0;
+  max-height: 100%;
+  overflow: scroll;
+}
+.container .card-body{
+  padding:0;
+  text-align: center;
+}
+.table{
+  border-collapse: collapse;
+}
+
+.table thead{
+  background-color: #0067ac;
+  color: white;
+}
+.table tbody{
+  background-color:#73bdff3d;
+  color: white;
+  overflow: hidden;
+}
+.table thead th,
+.table tbody tr td{
+  height: 50px;
+  vertical-align: middle;
+  border-left: solid 1px white;
+}
+.table tbody tr{
+  color: black;
+  border-color: white;
+}
+
+.table thead th:last-child,
+.table tbody tr:last-child td{
+  border-right: solid 1px white;
+}

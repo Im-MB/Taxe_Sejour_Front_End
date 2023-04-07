@@ -1,0 +1,49 @@
+
+<!-- Notification Create -Start- -->
+<div class="bg-modal">
+  <div class="modal-content">
+
+    <div class="card ">
+      <div class="card-header">Create Notification</div>
+      <div class="card-body">
+
+        <div class="form-group">
+          <label for="trimestre">Trimestre</label>
+          <div class="input">
+            <input id="trimestre" type="text" class="form-control" placeholder="Entrer le Trimestre" [(ngModel)]="notif.trimestre">
+            <span class="focus-input100"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="annee">Annee</label>
+          <div class="input">
+            <input id="annee" type="text" class="form-control" placeholder="Entrer l'annee" [(ngModel)]="notif.annee">
+            <span class="focus-input100"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="numero">Numero</label>
+          <div class="input">
+            <input id="numero" type="text" class="form-control" placeholder="Entrer le numero" [(ngModel)]="notif.numero">
+            <span class="focus-input100"></span>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="card-footer">
+        <button class="btn  btn-outline-warning " (click)="saveNotif()">
+          <span>
+            valider
+            <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+          </span>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Notification Create -End- -->
