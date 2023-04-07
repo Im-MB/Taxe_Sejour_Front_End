@@ -12,6 +12,9 @@ import { NotificationlocaleListeComponent } from './view/notificationlocale/noti
 import { NotificationlocaleCreateComponent } from './view/notificationlocale/notificationlocale-create/notificationlocale-create.component';
 import { LocalCreateComponent } from './view/locals/local-create/local-create.component';
 import { LocalListComponent } from './view/locals/local-list/local-list.component';
+import { TrimestreCreateComponent } from './view/trimestres/trimestre-create/trimestre-create.component';
+import { TrimestreListComponent } from './view/trimestres/trimestre-list/trimestre-list.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { BodyComponent } from './view/body/body.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 
@@ -28,14 +31,17 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
     NotificationlocaleCreateComponent,
     NotificationlocaleListeComponent,
     LocalCreateComponent,
-    LocalListComponent
+    LocalListComponent,
+    TrimestreCreateComponent,
+    TrimestreListComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
         FormsModule,
-        Ng2SearchPipeModule
+        Ng2SearchPipeModule,
+      SweetAlert2Module
     ],
   providers: [],
   bootstrap: [AppComponent]

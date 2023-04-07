@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RedevableService} from 'src/app/controler/service/redevable.service';
 import {Redevable} from 'src/app/controler/model/redevable.model';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 @Component({
   selector: 'app-redevable-create',
@@ -9,7 +10,14 @@ import {Redevable} from 'src/app/controler/model/redevable.model';
 })
 export class RedevableCreateComponent implements OnInit {
 
-
+  errorMessage(){
+    Swal.fire({
+      icon: 'error',
+      title: 'SAVE ERROR',
+      text:  ` REDEVABLE EXISTE!!`,
+      confirmButtonColor: '#004f83'
+    })
+  }
   constructor(private redevableService: RedevableService) {
   }
 
@@ -30,6 +38,8 @@ export class RedevableCreateComponent implements OnInit {
   }
 
 
+
+  //---------------
   get redevable(): Redevable {
 
     return this.redevableService.redevable;
@@ -46,6 +56,16 @@ export class RedevableCreateComponent implements OnInit {
   set redevables(value: Array<Redevable>) {
     this.redevableService.redevables = value;
   }
+
+//--------
+  public successNotification(){
+    Swal.fire(
+      'SAVE SUCCESS',
+      'success'
+    )
+  }
+
+
 
 
 }
