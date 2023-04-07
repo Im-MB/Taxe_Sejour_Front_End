@@ -64,7 +64,7 @@ body{
 .container{
   padding: 0 40px;
   max-height: 82vh;
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 .container .card-body{
   padding:0;

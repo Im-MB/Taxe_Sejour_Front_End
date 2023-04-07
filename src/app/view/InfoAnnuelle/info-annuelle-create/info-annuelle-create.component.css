@@ -11,6 +11,8 @@
 
 body{
   font-family: 'Poppins', sans-serif;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 
@@ -56,6 +58,9 @@ body{
 .container-table{
   padding: 0 40px;
   max-height: 82vh;
+}
+
+.container-table .list-infos{
   overflow: scroll;
 }
 .table{
@@ -278,11 +283,14 @@ body{
 /*-----Payment Form----*/
 
 /*----- Pdf Download -start- ----*/
+
+
 .container-allInfos{
   display: none;
   padding: 0 20px;
   background-color: white;
   position: relative;
+  overflow: scroll;
 }
 
 .container-allInfos .header-info{

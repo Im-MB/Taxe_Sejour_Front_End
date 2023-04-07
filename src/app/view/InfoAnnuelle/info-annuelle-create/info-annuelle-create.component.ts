@@ -68,6 +68,7 @@ export class InfoAnnuelleCreateComponent implements OnInit {
         this.annuelleAr.push(...this.annuelle)
         // @ts-ignore
         this.annuelleService.annuelle = null;
+        //ALERT
         alert('save success');
       } else {
         alert('save error');
