@@ -53,6 +53,10 @@ body{
 /*----Search Bar----*/
 
 /*----Infos Table----*/
+.card{
+
+  overflow: scroll;
+}
 .container .card-header{
   text-align: center;
   background: #0067ac;
@@ -61,7 +65,7 @@ body{
 .container{
   padding: 0 40px;
   max-height: 82vh;
-  overflow: scroll;
+  overflow: hidden;
 }
 .container .card-body{
   padding:0;

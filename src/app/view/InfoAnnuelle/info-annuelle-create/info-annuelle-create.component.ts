@@ -69,9 +69,22 @@ export class InfoAnnuelleCreateComponent implements OnInit {
         // @ts-ignore
         this.annuelleService.annuelle = null;
         //ALERT
-        alert('save success');
-      } else {
-        alert('save error');
+
+        alert('SAVE SUCCESS');
+      } else if(data == -1){
+        alert('PROB :: CHECK THE SUPPORT');
+      } else if(data == -2){
+        alert('REDEVABLE N\'EXISTE PAS');
+      } else if(data == -3){
+        alert('CATEGORIE LOCAL N\'EXISTE PAS');
+      } else if(data == -5){
+        alert('DATE PROBLEM');
+      } else if(data == -6){
+        alert('PAYMENT PROBLEM');
+      } else if(data == -7){
+        alert('INFO RECU PROBLEM');
+      } else{
+        alert('LOCAL N\'EXISTE PAS ');
       }
     });
   }
@@ -79,7 +92,6 @@ export class InfoAnnuelleCreateComponent implements OnInit {
 
   public payement(annuelle:any){
     this.annuelleService.payement(annuelle).subscribe((total)=> {
-    console.log(total);
       this.total = total})
   }
 
