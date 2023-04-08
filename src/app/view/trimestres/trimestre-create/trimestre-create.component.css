@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --color-default:#004f83;
+  --color-second:#0067ac;
+  --color-three:#73bdff3d;
+  --color-white:#fff;
+  --color-body:#e4e9f7;
+  --color-light:#e0e0e0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/*----Edit -Start- ----*/
+.bg-modal{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.bg-modal .modal-content{
+  display: flex;
+  align-items: center;
+  height:81vh;
+}
+
+.bg-modal .modal-content .card{
+  height: 81vh;
+  width:100%;
+}
+
+.bg-modal .modal-content .card-header{
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 0;
+  color: #333;
+  font-weight: 900;
+}
+
+.bg-modal .modal-content .card-footer{
+  background-color: #fff;
+  text-align: center;
+}
+
+
+.bg-modal .modal-content .card-footer .btn{
+  background: #004f83;
+  transition: all .4s;
+  color: #fff;
+  border: solid 2px #004f83;
+}
+
+.bg-modal .modal-content .card-footer .btn:hover{
+  color: #004f83;
+  background: #fff;
+  border: solid 2px #004f83;
+  cursor: pointer;
+}
+
+.bg-modal .modal-content .card-footer .btn span {
+  margin: 20px;
+
+}
+
+.bg-modal .modal-content .card-footer .btn:hover span i{
+  position: relative;
+  left: 6px;
+}
+
+.bg-modal .modal-content .form-group{
+  border-bottom: 2px solid #d9d9d9;
+  margin: 20px 0 25px;
+}
+
+.bg-modal .modal-content .form-group label{
+  font-size: 13px;
+  color: #333;
+  padding-left: 10px;
+}
+
+.bg-modal .modal-content .form-group input{
+  box-shadow: none;
+  border: none;
+}
+
+.bg-modal .modal-content .form-group:nth-child(1) .focus-input100{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  z-index: 99;
+  background-color: #004f83;
+  transition: all .4s;
+}
+
+.bg-modal .modal-content .form-group:nth-child(2) .focus-input100{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  z-index: 99;
+  background-color: #004f83;
+  transition: all .4s;
+}
+.bg-modal .modal-content .form-group:nth-child(3) .focus-input100{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  background-color: #004f83;
+  transition: all .4s;
+}
+
+.bg-modal .modal-content .form-group input:focus+.focus-input100{
+  width: 100%;
+}
+
+.bg-modal .modal-content .input{
+  position: relative;
+}
