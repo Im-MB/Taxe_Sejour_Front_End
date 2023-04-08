@@ -5,6 +5,7 @@ import {InfoAnnuelleCreateComponent} from "./view/InfoAnnuelle/info-annuelle-cre
 import {RedevableListComponent} from "./view/redevables/redevable-list/redevable-list.component";
 import {NotificationlocaleListeComponent} from "./view/notificationlocale/notificationlocale-liste/notificationlocale-liste.component";
 import {LocalListComponent} from "./view/locals/local-list/local-list.component";
+import {TrimestreListComponent} from "./view/trimestres/trimestre-list/trimestre-list.component";
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'local',
     component:LocalListComponent
+  },
+  {
+    path:'trimestre',
+    component:TrimestreListComponent
   }
 ];
 

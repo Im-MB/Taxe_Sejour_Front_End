@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 @Component({
   selector: 'app-root',
@@ -33,6 +34,22 @@ export class AppComponent implements OnInit{
     }
     //-------------------
 
+  }
+
+  successNotification(){
+    Swal.fire(
+      'SAVE SUCCESS',
+      'success'
+    )
+  }
+
+  errorMessage(x:string){
+    Swal.fire({
+      icon: 'error',
+      title: 'SAVE ERROR',
+      text:  ` ${x} EXISTE!!`,
+      confirmButtonColor: '#004f83'
+    })
   }
 
 

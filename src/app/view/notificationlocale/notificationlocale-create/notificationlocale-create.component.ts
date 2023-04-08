@@ -8,7 +8,7 @@ import {Notif} from "src/app/controler/model/notif";
   templateUrl: './notificationlocale-create.component.html',
   styleUrls: ['./notificationlocale-create.component.css']
 })
-export class NotificationlocaleCreateComponent {
+export class NotificationlocaleCreateComponent implements OnInit{
 
   notif = new Notif();
   result: any;
@@ -25,7 +25,6 @@ export class NotificationlocaleCreateComponent {
             alert("saved");
             this.notificationlocaleservice.findAll().subscribe(data=> this.notificationlocales=data);
           }
-
           if (resp == -3) {
             alert("locals n'existe pas");
           }
@@ -35,18 +34,14 @@ export class NotificationlocaleCreateComponent {
           if (resp == -1) {
             alert("notification n'existe pas") ;
           }
-
           if (resp == -4) {
             alert("redevable n'existe pas");
           }
-
         })
-
       }else{
-        this.result = "notification dupliquee";
+        alert("notification dupliquee");
       }
-
-      //this.notificationlocales.push({...this.notificationlocale});
+      this.notificationlocales.push({...this.notificationlocale});
     })
   }
 
@@ -63,6 +58,9 @@ export class NotificationlocaleCreateComponent {
 
   set notificationlocales(value: NotificationLocale[]) {
     this.notificationlocaleservice.notificationlocales = value;
+  }
+
+  ngOnInit(): void {
   }
 
 }
