@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --color-default:#004f83;
+  --color-second:#0067ac;
+  --color-three:#73bdff3d;
+  --color-white:#fff;
+  --color-body:#e4e9f7;
+  --color-light:#e0e0e0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.father{
+  display: flex;
+}
+
+.earthcard{
+  width: 600px;
+}
+
+
+.searchcard{
+  margin-top: 90px;
+  width: 300px;
+  margin-left: 5px;
+}
+.searchcard .upbar input:focus{
+  box-shadow: none;
+}
+
+.showAllBtn{
+  margin: 10px;
+}
+
+
+.earth {
+  cursor: pointer;
+  margin: auto;
+  margin-top: 70px;
+  width: 450px;
+  height: 450px;
+  background-image: url("https://1.bp.blogspot.com/-UUXaK5GCj-k/UcsKJRMgkVI/AAAAAAAACfM/sePP_H08JTQ/s1600/1.jpg");
+  border-radius: 50%;
+  animation: spin 30s linear alternate infinite;
+  box-shadow: -20px -20px 50px 2px #000 inset,0 0 20px 2px #000;
+}
+
+@keyframes spin {
+  100%{background-position: 100%;}
+}
+
+
+.title{
+  background-color: #004f83;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 90px;
+  width: 550px;
+}
+
+
+.placecadre{
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  width: 550px;
+  height: 350px;
+  border-bottom-left-radius: 17px ;
+  border-bottom-right-radius: 17px
+}
+
+.heads{
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+
+.profil{
+width: 60px;
+height: 60px;
+border-radius: 20px;
+background-image: url("src/app/view/earth/imgs/daoudiate.png")}
+
+
+
+
+
+
+/*--------------------------------------*/
+.upbar{
+  position: relative;
+  background-color: #004f83;
+  padding: 11px;
+ border-top-left-radius: 17px ;
+ border-top-right-radius: 17px;
+}
+
+
+.tabcin{
+  background-color: #73bdff3d;
+  padding: 12px;
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+  max-height: 350px;
+  overflow: scroll;
+  border-bottom: solid 1.5px #73bdff3d;
+}
+
+.card-footer .btn{
+  background: #004f83;
+  transition: all .4s;
+  color: #fff;
+  border: solid 2px #004f83;
+}
+.card-footer{
+  text-align: center;
+  background: #73bdff3d;
+  border-radius: 0 0 9px 9px;
+}
+.card-footer .btn:hover{
+  color: #004f83;
+  background: #fff;
+  border: solid 2px #004f83;
+  cursor: pointer;
+}
+
+.searchicon{
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color:#6e777f;
+}
+
+.upbar span{
+  content: '';
+  width: 2px;
+  height: 32px;
+  position: absolute;
+  background: #6e777f;
+  right: 44px;
+  border-radius: 3Px;
+}
+
+.card-footer .btn{
+  width: 60%;
+}
+.carre{
+  width: 100px;
+  height: 100px;
+}
+
+.topcenter{
+  position: absolute;
+  top: 40px;
+  right:250px
+}
+.topleft{
+  position: absolute;
+  top: 40px;
+  left:40px}
+
+.topright{
+  position: absolute;
+  top: 40px;
+  right:40px
+}
+.middle{
+  position: absolute;
+  top: 150px;
+  right:250px
+}
+.middleleft{
+  position: absolute;
+  top: 150px;
+  left:40px
+}
+.middleright{
+  position: absolute;
+  top: 150px;
+  right:40px
+}
+.botleft{
+  position: absolute;
+  bottom: 40px;
+  left:40px
+}
+.botcenter{
+  position: absolute;
+  bottom: 40px;
+  left:250px
+}
+.botright{
+  position: absolute;
+  bottom: 40px;
+  right:40px
+}
+
+.gplace{
+  position: absolute;
+  bottom: 70px;
+  left:150px
+}
+
+.dplace{
+  position: absolute;
+  bottom: 200px;
+  right:250px
+}
+
+.mplace{
+  position: absolute;
+  bottom: 10px;
+  right:150px
+}
+
+
+.kesh{
+  transition: all 5s ease;
+  background-image: url("src/app/view/earth/imgs/kesh.png")}
+
+.gueliz{
+  transition: all 5s ease;
+  background-image: url("src/app/view/earth/imgs/gueliz.png")}
+
+.imam-malik{
+  background-image: url("src/app/view/earth/imgs/imammalik.png")}
+
+.ibn-toumert{
+  background-image: url("src/app/view/earth/imgs/ibntoumert.png")}
+
+.medina{
+  background-image: url("src/app/view/earth/imgs/medina.png")}
+
+.jamaa-el-fana{
+  background-image: url("src/app/view/earth/imgs/elfana.png")}
+
+.el-koutoubia{
+  background-image: url("src/app/view/earth/imgs/koutoubia.png")}
+
+.hay-mohamadi{
+  background-image: url("src/app/view/earth/imgs/haymohamadi.png")}
+
+.al-qods{
+  background-image: url("src/app/view/earth/imgs/qods.png")}
+
+.daoudiate{
+  background-image: url("src/app/view/earth/imgs/daoudiate.png")}
+
+
+.lochead{
+  background-color: #004f83;
+  color: white;
+  border-top-left-radius:15px;
+  border-top-right-radius:15px;
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.localwindow{
+  color: black;
+  font-weight: bold;
+  border-radius: 15px;
+  margin-top: 90px;
+  margin-left: 50px;
+  background-color: #73bdff3d;
+  width: 200px;
+  max-height: 450px;
+}
+
+.pointer{
+  cursor: pointer;
+}

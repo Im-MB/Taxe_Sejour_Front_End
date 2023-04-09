@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from 'src/app/app.component';
 import {HttpClientModule} from "@angular/common/http";
@@ -17,6 +18,10 @@ import { TrimestreListComponent } from './view/trimestres/trimestre-list/trimest
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { BodyComponent } from './view/body/body.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
+import {EarthComponent} from "./view/earth/earth.component";
+import {TaxeTrimCreateComponent} from "./view/taxeTrim/taxe-trim-create/taxe-trim-create.component";
+import {TaxeTrimListComponent} from "./view/taxeTrim/taxe-trim-list/taxe-trim-list.component";
+import { HomePageComponent } from './view/home-page/home-page.component';
 
 
 
@@ -33,7 +38,11 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
     LocalCreateComponent,
     LocalListComponent,
     TrimestreCreateComponent,
-    TrimestreListComponent
+    TrimestreListComponent,
+    EarthComponent,
+    TaxeTrimCreateComponent,
+    TaxeTrimListComponent,
+    HomePageComponent
   ],
     imports: [
         BrowserModule,
@@ -41,7 +50,8 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
         HttpClientModule,
         FormsModule,
         Ng2SearchPipeModule,
-      SweetAlert2Module
+        SweetAlert2Module,
+        BrowserAnimationsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

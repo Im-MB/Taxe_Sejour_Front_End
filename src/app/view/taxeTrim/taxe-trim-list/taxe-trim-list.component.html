@@ -1,0 +1,61 @@
+<!--Search Bar -Start- -->
+<div class="container-search">
+
+  <div class="row height d-flex justify-content-center align-items-center">
+
+    <div class="col-md-6">
+
+      <div class="form d-flex">
+          <input type="text" class="form-control form-input" [(ngModel)]="key" placeholder="Chercher des taxes">
+          <i class="fa fa-search" (click)="doFilter()" style="cursor:pointer;"></i>
+              <select class="form-select combo" [(ngModel)]="filter" style="width: 25%;box-shadow: none">
+                <option selected value="cin">Cin</option>
+                <option value="ref">Ref Local</option>
+                <option value="all">All</option>
+              </select>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!--Search Bar -End- -->
+
+<div class="container d-flex justify-content-around" style="margin:0;">
+  <div class="col-md-4">
+    <app-taxe-trim-create></app-taxe-trim-create>
+  </div>
+  <div class="card col-md-6">
+    <div class="card-header"> Liste des Redevables</div>
+    <div class="card-body">
+      <table class="table  table-bordered   "> <!--*ngIf="redevables.length != 0"-->
+        <thead>
+        <th>CIN</th>
+        <th>Reference Local</th>
+        <th>Categorie</th>
+        <th>Mois de retard</th>
+        <th>Montant Total</th>
+        <th>Annee</th>
+        <th>Trimestre</th>
+        <th>Delete</th>
+        </thead>
+        <tbody >
+        <tr *ngFor="let c of taxeTrims; index as i" >
+          <td>{{c.cin}}</td>
+          <td>{{c.localRef}}</td>
+          <td>{{c.categorieName}}</td>
+          <td>{{c.nombreMoisRetard}}</td>
+          <td>{{c.montantTotal}}</td>
+          <td>{{c.annee}}</td>
+          <td>{{c.nombreTrim}}</td>
+          <td> <button (click)="deleteTaxe(c.ref)" class="bi bi-trash">delete</button> </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

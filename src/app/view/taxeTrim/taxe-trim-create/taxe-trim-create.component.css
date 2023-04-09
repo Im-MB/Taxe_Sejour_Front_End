@@ -13,7 +13,6 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
-
 /*----Edit -Start- ----*/
 .bg-modal{
   width: 100%;
@@ -30,13 +29,14 @@ body{
 .bg-modal .modal-content .card{
   height: 81vh;
   width:100%;
+  overflow: scroll;
 }
 
 .bg-modal .modal-content .card-header{
   background-color: white;
   text-align: center;
   font-size: 30px;
-  padding: 20px 0;
+  padding: 4px 0;
   color: #333;
   font-weight: 900;
 }
@@ -97,8 +97,6 @@ body{
   transition: all .4s;
 }
 
-
-
 .bg-modal .modal-content .form-group input:focus+.focus-input100{
   width: 100%;
 }
@@ -106,3 +104,9 @@ body{
 .bg-modal .modal-content .input{
   position: relative;
 }
+
+.form-select:focus{
+  box-shadow: none;
+  border: solid 2px rgba(0,79,131,40%);
+}
+

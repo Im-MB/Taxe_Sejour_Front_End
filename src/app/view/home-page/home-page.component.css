@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --color-default:#004f83;
+  --color-second:#0067ac;
+  --color-white:#fff;
+  --color-body:#e4e9f7;
+  --color-light:#e0e0e0;
+  --color-text:#212529;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: #fff;
+  height: 400vh;
+}
+
+/* === NavBar -Start- === */
+
+.navbar{
+  background-color: #fff;
+  padding: 20px 40px;
+  position: sticky;
+  transition: 0.2s;
+  display: flex;
+  /*didn't work*/
+  border-radius: 2px;
+  box-shadow: 0 1px 10px #999;
+}
+
+.navbar .logo-header{
+  font-size: 30px;
+  text-align: start;
+  margin-left: 30px;
+}
+
+.navbar .logo-header span{
+  font-weight: 900;
+}
+
+
+
+.navbar .navbar-btns .pages-btns{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin-right: 30px;
+}
+
+.navbar .navbar-btns .pages-btns .navbar-btn a{
+  text-decoration: none;
+  color: black;
+}
+.navbar .navbar-btns .pages-btns .navbar-btn {
+  position: relative;
+  margin: 0 10px;
+}
+.navbar .navbar-btns .pages-btns .navbar-btn span{
+  content: '';
+  height: 100%;
+  position: absolute;
+  background: #0067ac;
+  left: -4px;
+  width: 0;
+  z-index: -1;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar .navbar-btns .pages-btns .navbar-btn:hover span{
+  width: 50%;
+}
+
+/*didn't work*/
+.floatingNav {
+  width: calc(100vh - 100px);
+  border-radius: 2px;
+  box-shadow: 0 1px 10px #999;
+}
+/* === NavBar -End- === */
+/* === Banner -Start- === */
+.container  .image{
+  height: 50vh;
+  width: 50%;
+}
+
+
+.container  .image div{
+  background-image: url("src/app/view/home-page/Images/Banner2.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* === Banner -End- === */

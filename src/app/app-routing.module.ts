@@ -6,6 +6,8 @@ import {RedevableListComponent} from "./view/redevables/redevable-list/redevable
 import {NotificationlocaleListeComponent} from "./view/notificationlocale/notificationlocale-liste/notificationlocale-liste.component";
 import {LocalListComponent} from "./view/locals/local-list/local-list.component";
 import {TrimestreListComponent} from "./view/trimestres/trimestre-list/trimestre-list.component";
+import {EarthComponent} from "./view/earth/earth.component";
+import {TaxeTrimListComponent} from "./view/taxeTrim/taxe-trim-list/taxe-trim-list.component";
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path:'trimestre',
     component:TrimestreListComponent
+  },
+  {
+    path:'localMaps',
+    component:EarthComponent
+  },
+  {
+    path:'taxeTrim',
+    component:TaxeTrimListComponent
   }
 ];
 

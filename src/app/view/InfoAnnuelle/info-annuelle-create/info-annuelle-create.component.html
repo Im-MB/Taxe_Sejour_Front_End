@@ -167,11 +167,13 @@
 
 
         <div class="form-group">
-          <label for="categorieLocalName">Categorie Name Local</label>
-          <div class="input">
-            <input id="categorieLocalName" type="text" class="form-control" [(ngModel)]="annuelle.categorieLocalName">
-            <span class="focus-input100"></span>
-          </div>
+          Categorie Name Local
+          <select class="form-select" [(ngModel)]="annuelle.categorieLocalName" style="box-shadow: none;">
+            <option value="Villa">villa</option>
+            <option value="Maison">Maison</option>
+            <option value="Duplex">Duplex</option>
+            <option value="Appartement">Appartement</option>
+          </select>
         </div>
 
 
