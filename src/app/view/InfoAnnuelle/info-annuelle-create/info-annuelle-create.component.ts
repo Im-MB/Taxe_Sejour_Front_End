@@ -61,30 +61,34 @@ export class InfoAnnuelleCreateComponent implements OnInit {
     this.selectedInfo = info;
   }
 
+
   public save(): void {
-    this.annuelleService.save().subscribe(data => {
+    this.annuelleService.save().subscribe((data : number ) => {
       if (data == 1) {
-        // @ts-ignore
-        this.annuelleAr.push(...this.annuelle)
         // @ts-ignore
         this.annuelleService.annuelle = null;
         //ALERT
 
         alert('SAVE SUCCESS');
-      } else if(data == -1){
-        alert('PROB :: CHECK THE SUPPORT');
-      } else if(data == -2){
-        alert('REDEVABLE N\'EXISTE PAS');
-      } else if(data == -3){
-        alert('CATEGORIE LOCAL N\'EXISTE PAS');
-      } else if(data == -5){
-        alert('DATE PROBLEM');
-      } else if(data == -6){
-        alert('PAYMENT PROBLEM');
-      } else if(data == -7){
-        alert('INFO RECU PROBLEM');
-      } else{
+        console.log('SAVE SUCCESS');
+      } if(data == -1){
         alert('LOCAL N\'EXISTE PAS ');
+        console.log('LOCAL N\'EXISTE PAS');
+      } if(data == -2){
+        alert('REDEVABLE N\'EXISTE PAS');
+        console.log('REDEVABLE N\'EXISTE PAS');
+      } if(data == -3){
+        alert('CATEGORIE LOCAL N\'EXISTE PAS');
+        console.log('CATEGORIE LOCAL N\'EXISTE PAS');
+      } if(data == -5){
+        alert('DATE PROBLEM');
+        console.log('DATE PROBLEM');
+      } if(data == -6){
+        alert('PAYMENT PROBLEM');
+        console.log('PAYMENT PROBLEM');
+      } if(data == -7){
+        alert('INFO RECU PROBLEM');
+        console.log('INFO RECU PROBLEM');
       }
     });
   }
@@ -123,4 +127,8 @@ export class InfoAnnuelleCreateComponent implements OnInit {
   set annuelleAr(value: Array<Annuelle>) {
     this.annuelleService.annuelleAr = value;
   }
+
+
+
+
 }

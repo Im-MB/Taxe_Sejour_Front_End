@@ -1,4 +1,4 @@
-import {createEnvironmentInjector, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Annuelle} from "../model/annuelle.model";
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
@@ -12,7 +12,6 @@ export class AnnuelleService {
   private _annuelle: Annuelle | undefined ;
   private _annuelleAr: Array<Annuelle> | undefined;
   private url = environment.baseUrl + 'InfoAnnuelle/' ;//http://localhost:8036/api/v1/InfoAnnuelle/
-  private url2 = environment.baseUrl + 'redevable/cin/EE001';
   private url3 = environment.baseUrl + 'taxeAnnuelle/';
   constructor(private http: HttpClient) { }
 
@@ -20,9 +19,6 @@ export class AnnuelleService {
     return this.http.post<number>(this.url,this.annuelle);
   }
   //-------------
-  public redevableInfo(){
-    return this.http.get(this.url2);
-  }
   //-------------
   public taxeAnnuelleInfo(){
     return this.http.get(this.url3);
