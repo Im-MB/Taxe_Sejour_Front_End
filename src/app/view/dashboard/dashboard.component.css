@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --color-default:#004f83;
+  --color-second:#0067ac;
+  --color-three:#9c7258;
+  --color-body:#e4e9f7;
+  --color-light:#e0e0e0;
+  --color-text:#212529;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #e4e9f7;
+}
+
+
+/*-- == Numbers -Start- == --*/
+.numbers{
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  margin: 25px 0;
+  height: 20vh;
+  align-items: center;
+  box-shadow: 0 1px 10px #999;
+}
+.numbers div{
+  position: relative;
+  border: solid 3px white;
+  border-radius: 50%;
+
+}
+.numbers div .shadow{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+.numbers div i{
+  font-size: 70px;
+  margin: 15px;
+  color: white;
+}
+
+.numbers .redevable{
+  background: #68914d;
+}
+
+.numbers .appart{
+  background: #ed4635;
+}
+
+
+.numbers .villa{
+  background: #0067ac;
+}
+
+
+.numbers .duplex{
+  background: #004f83;
+}
+
+.numbers h3{
+  margin: 10px 0;
+  font-weight: bold;
+}
+/*-- == Numbers -End- == --*/
+
+/*-- == Chart One -Start- == --*/
+.header{
+  margin: 10px 0;
+  text-align: center;
+}
+.header h3{
+  color:#004f83;
+  font-weight: 600;
+}
+.chart{
+  background: white;
+  margin: 10px 20px;
+  border-radius: 15Px;
+  box-shadow: 0 1px 10px #999;
+}
+/*-- == Chart One -End- == --*/
+/*-- == Chart Two -Start- == --*/
+.chartTwo{
+  background: white;
+  margin: 10px 30px;
+  border-radius: 15Px;
+  box-shadow: 0 1px 10px #999;
+}
+
+/*-- == Chart Two -End- == --*/
+/*-- == Drop Down -Start- == --*/
+.userList{
+  margin: 20px;
+}
+.dropdown button{
+  background: white;
+  width: 100%;
+  padding: 0 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 1px 10px #999;
+  color: #004f83;
+  border: solid 1px #004f83;
+  font-weight: bold;
+  font-size: 22px;
+}
+.dropdown button:hover{
+  border: solid 2px #004f83;
+}
+.dropdown-toggle::after{
+  margin-right: 20px;
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  right: 0;
+  position: absolute;
+  color: #004f83;
+}
+.dropdown .img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: solid 2px #004f83;
+  width: 47px;
+  height: 47px;
+  overflow: hidden;
+}
+.dropdown .img img{
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+/*-- == Drop Down -End- == --*/

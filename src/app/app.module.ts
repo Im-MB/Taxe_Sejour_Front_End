@@ -22,6 +22,9 @@ import {EarthComponent} from "./view/earth/earth.component";
 import {TaxeTrimCreateComponent} from "./view/taxeTrim/taxe-trim-create/taxe-trim-create.component";
 import {TaxeTrimListComponent} from "./view/taxeTrim/taxe-trim-list/taxe-trim-list.component";
 import { HomePageComponent } from './view/home-page/home-page.component';
+import { DashboardComponent } from './view/dashboard/dashboard.component';
+import {NgApexchartsModule} from "ng-apexcharts";
+import {RouterModule} from "@angular/router";
 
 
 
@@ -42,7 +45,8 @@ import { HomePageComponent } from './view/home-page/home-page.component';
     EarthComponent,
     TaxeTrimCreateComponent,
     TaxeTrimListComponent,
-    HomePageComponent
+    HomePageComponent,
+    DashboardComponent
   ],
     imports: [
         BrowserModule,
@@ -51,7 +55,9 @@ import { HomePageComponent } from './view/home-page/home-page.component';
         FormsModule,
         Ng2SearchPipeModule,
         SweetAlert2Module,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        NgApexchartsModule,
+        RouterModule
     ],
   providers: [],
   bootstrap: [AppComponent]

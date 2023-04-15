@@ -23,12 +23,12 @@ body{
   min-height: 100vh;
   width: 78px;
   padding: 6px 14px;
-  z-index: 99;
+  z-index: 98;
   background-color: #004f83;/*--color-default*/
   transition: all .5s ease;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -250px;
 }
 
 .sidebar.open{
@@ -246,8 +246,9 @@ body{
   background-color: #e4e9f7;
   min-height: 100vh;
   top: 0;
-  left: 78px;
-  width: calc(100% - 78px);
+  /*left: 78px;*/
+  /*width: calc(100% - 78px); restart the old settings just remove the width:100%*/
+  width:100%;
   transition: all 0.5s ease;
   z-index: 2;
 }

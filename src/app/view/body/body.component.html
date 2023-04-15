@@ -10,17 +10,17 @@
   <title>Taxe Sejour</title>
 </head>
 <body>
-
-  <div class="sidebar">
+<!-- == Side bar -Start- == -->
+  <div class="sidebar" id="sidebar" >
     <div class="logo_details">
       <i class="bx bx-detail icon"></i>
-      <div class="logo_name">Taxe Sejour</div>
+      <div class="logo_name" routerLink="home"  style="cursor: pointer;">Taxe Sejour</div>
       <i class="bx bx-menu" id="btn"></i>
     </div>
     <!--Dashboard-->
     <ul class="nav-list">
       <li>
-        <a  routerLink="">
+        <a  routerLink="dashboard" >
           <i class="bx bx-grid-alt"></i>
           <span class="link_name">Dashboard</span>
         </a>
@@ -29,7 +29,7 @@
     <!--Dashboard-->
     <!--Redevable-->
       <li>
-        <a  routerLink="redevable">
+        <a  routerLink="redevable" >
           <i class="bx bx-user"></i>
           <span class="link_name">Redevable</span>
         </a>
@@ -38,7 +38,7 @@
     <!--Redevable-->
       <!--Local Maps-->
       <li>
-        <a routerLink="localMaps">
+        <a routerLink="localMaps" >
           <i class='bx bx-map'></i>
           <span class="link_name">Local Maps</span>
         </a>
@@ -47,7 +47,7 @@
       <!--Local Maps-->
     <!--Local-->
       <li>
-        <a routerLink="local">
+        <a routerLink="local" >
           <i class="bx bx-home"></i>
           <span class="link_name">Local</span>
         </a>
@@ -56,7 +56,7 @@
     <!--Local-->
       <!--Add Trimestre-->
       <li>
-        <a routerLink="trimestre">
+        <a routerLink="trimestre" >
           <i class='bx bx-message-alt-add'></i>
           <span class="link_name">Creation Trimestre</span>
         </a>
@@ -65,7 +65,7 @@
       <!--Add Trimestre-->
     <!--Taxe Trimestre-->
       <li>
-        <a routerLink="taxeTrim">
+        <a routerLink="taxeTrim" >
           <i class='bx bx-calendar-week' ></i>
           <span class="link_name">Taxe Trimestre</span>
         </a>
@@ -74,7 +74,7 @@
     <!--Taxe Trimestre-->
     <!--Taxe Annuelle-->
       <li>
-        <a  routerLink="taxeAnnuelle">
+        <a  routerLink="taxeAnnuelle" >
           <i class='bx bx-calendar' ></i>
           <span class="link_name">Taxe Annuelle</span>
         </a>
@@ -84,7 +84,7 @@
 
     <!--Notification-->
       <li>
-        <a routerLink="notificationLocal">
+        <a routerLink="notificationLocal" >
           <i class='bx bx-bell' ></i>
           <span class="link_name">Notification</span>
         </a>
@@ -93,9 +93,9 @@
     <!--Notification-->
 
     <!--Profile-->
-      <li class="profile">
+      <li class="profile" id="profile">
         <div class="profile_details">
-          <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" class="profile image">
+          <img src="../../../assets/Images/Mehdi.jpeg" alt="" class="profile image">
           <div class="profile_content">
             <div class="name">Mehdi</div>
             <div class="designation">Admin</div>
@@ -107,12 +107,12 @@
     </ul>
   </div>
 
-  <section class="home-section">
-    <!--Routing Pages-->
-    <router-outlet></router-outlet>
-    <!--Routing Pages-->
-  </section>
+<section class="home-section" id="homeSection">
+  <!--Routing Pages-->
+  <router-outlet></router-outlet>
+  <!--Routing Pages-->
+</section>
 
-
+<!-- == Side bar -End- == -->
 </body>
 </html>

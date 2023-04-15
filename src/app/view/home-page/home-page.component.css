@@ -3,7 +3,7 @@
 :root{
   --color-default:#004f83;
   --color-second:#0067ac;
-  --color-white:#fff;
+  --color-three:#9c7258;
   --color-body:#e4e9f7;
   --color-light:#e0e0e0;
   --color-text:#212529;
@@ -13,12 +13,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body{
-  background-color: #fff;
-  height: 400vh;
+  z-index: 99;
+  background-color: #e4e9f7;
 }
 
 /* === NavBar -Start- === */
@@ -26,7 +25,9 @@ body{
 .navbar{
   background-color: #fff;
   padding: 20px 40px;
-  position: sticky;
+  position: fixed;
+  width:100%;
+  left:0;
   transition: 0.2s;
   display: flex;
   /*didn't work*/
@@ -42,6 +43,7 @@ body{
 
 .navbar .logo-header span{
   font-weight: 900;
+  color:#004f83;
 }
 
 
@@ -65,7 +67,7 @@ body{
   content: '';
   height: 100%;
   position: absolute;
-  background: #0067ac;
+  background: #9c7258;
   left: -4px;
   width: 0;
   z-index: -1;
@@ -84,18 +86,393 @@ body{
 }
 /* === NavBar -End- === */
 /* === Banner -Start- === */
-.container  .image{
-  height: 50vh;
-  width: 50%;
+.home-page .container  .image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 15px;
 }
 
 
-.container  .image div{
-  background-image: url("src/app/view/home-page/Images/Banner2.png");
+.home-page .container  .image img{
+  max-height:100%;
+  max-width:100%;
+}
+
+.texts{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.texts .text{
+  display:none;
+}
+
+.texts .active{
+  display:flex;
+}
+
+.texts .text h2{
+  line-height:1.6;
+  font-weight: 700;
+  color:#004f83;
+}
+
+.text .text-span{
+  display:block;
+}
+
+.texts .switch-text{
+  display:flex;
+  position:absolute;
+  bottom:40px;
+  right:0;
+}
+
+.texts .switch-text .btn{
+  margin:0 20px;
+  width:12px;
+  height:12px;
+  background:#9c7258;
+  border-radius: 0;
+  transform: rotate(45deg);
+  box-shadow: 0 1px 10px #999;
+}
+/* === Banner -End- === */
+/* === About Us -Start- === */
+.aboutUs{
+  padding: 0 65px;
+  position: relative;
+}
+.containerAboutUs{
+  margin-top:90px;
+}
+.aboutUs .description{
+  margin:35px;
+  overflow: hidden;
+}
+.aboutUs .description .head h2{
+  color: #004f83;
+  font-size: 80px;
+  font-weight: 700;
+  margin: 30px 0;
+}
+.aboutUs .description .head p{
+  color: #212529;
+  line-height: 1.85;
+  font-size: 25px;
+}
+
+.aboutUs .description .imageUs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 15px;
+  height:82vh;
+}
+
+
+
+.aboutUs .container .head {
+  text-align:center;
+  margin: 0 0 0 35px;
+}
+.aboutUs .container .head h2{
+
+  color: #004f83;
+  font-size: 80px;
+  font-weight: 700;
+  margin: 50px 0;
+}
+.aboutUs .container{
+  margin: 35px 0;
+}
+
+.aboutUs .description img{
+  max-height:100%;
+  max-width:100%;
+}
+.aboutUs .team .members{
+  text-align:center;
+  position: relative;
+}
+.aboutUs .team img{
+  max-height: 100%;
+  max-width: 100%;
+  height: 250Px;
+  width: 250px;
+}
+.aboutUs .container .team .members{
+  display: flex;
+  justify-content: center;
+}
+.aboutUs .container .team .members .details{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: -100px;
+  background: #0067ac;
+  color:white;
+  height: 83px;
+  transition: all 0.4s ease-in-out;
+}
+.aboutUs .container .team .members .member:hover .details{
+  bottom: 0;
+}
+
+.aboutUs .container .team .members .details div:nth-child(1){
+  margin: 8px 0 4px;
+  font-weight: 700;
+}
+.aboutUs .container .team .members .member{
+  border: solid 2px #004f83;
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+.aboutUs .container .team .members .details div button{
+  background: none;
+  border: none;
+  border-bottom: 2px solid #9c7258;
+  padding: 0 6px;
+  color: white;
+  font-size: 15px;
+}
+/* === Details Display -Start- === */
+.closeIcon{
+  position:absolute;
+  top: 0;
+  right: 15px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #9c7258;
+}
+
+.closeIcon:hover{
+  color: #333333;
+}
+.bg-modal{
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left:0;
+  display: none;
+  align-items: center;
+}
+.bg-modal .modal-content{
+  display: flex;
+  align-items: center;
 }
 
-/* === Banner -End- === */
+.bg-modal .modal-content .teamDetails{
+  height: 400px;
+}
+.bg-modal .modal-content .image{
+
+  height: 250px;
+  width: 250px;
+  margin: 30PX 30px;
+}
+
+.bg-modal .modal-content .image img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 15px;
+  border: 3px solid #004f83;
+}
+
+.bg-modal .modal-content .card{
+  overflow:hidden
+}
+
+.bg-modal .modal-content .card .infos{
+  Width:100%
+}
+
+.bg-modal .modal-content .card .infos .fullName{
+  color: #004f83;
+  margin: 35px 0;
+}
+
+.bg-modal .modal-content .card .infos .fullName h3{
+
+  font-weight: 700;
+  font-size: 30Px;
+  margin: 5px 0;
+}
+
+
+.bg-modal .modal-content .card .infos ul{
+  list-style: none;
+  margin: 0 0 25px;
+}
+
+.bg-modal .modal-content .card .infos ul li:nth-child(1){
+  color: #9c7258;
+  font-weight: 500;
+  font-size: 17px;
+}
+.bg-modal .modal-content .card .infos ul li:nth-child(2),
+.bg-modal .modal-content .card .infos ul li:nth-child(3){
+  margin: 0 0 0 15px;
+}
+.bg-modal .modal-content .card .infos .social i{
+  color: #9c7258;
+  cursor: pointer;
+  margin:0 10px;
+  font-size: 35px;
+  position: relative;
+}
+.bg-modal .modal-content .card .infos .social i a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+/* === Details Display -End- === */
+.square1{
+  color:#9c7258;
+  position: absolute;
+  bottom: 55%;
+  left: 25%;
+  font-size: 50px;
+}
+.square2{
+  color:#9c7258;
+  font-size: 50px;
+}
+.square3{
+  position: absolute;
+  bottom: 50px;
+  font-size: 100px;
+  left: -58px;
+  color:#004f83a6;
+  rotate:45deg;
+}
+.square4{
+  position: absolute;
+  bottom: 70px;
+  font-size: 100px;
+  left: -58px;
+  color:#004f83a6;
+  rotate:45deg;
+}
+.square5{
+  position: absolute;
+  top: 50px;
+  font-size: 100px;
+  right: -58px;
+  color:#004f83a6;
+  rotate:45deg;
+}
+/* === About Us -End- === */
+/* === Images -Start- === */
+.getStarted{
+  background: white;
+}
+.getStarted .containergetStarted{
+  margin-bottom: 35px ;
+}
+.getStarted .img1,
+.getStarted .img2,
+.getStarted .img3,
+.getStarted .img4{
+  height: 100px;
+  width: 130px;
+}
+.getStarted .img5{
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.getStarted img{
+  position:relative;
+  z-index:2;
+  box-shadow: 0 1px 10px #999;
+  border-radius: 3px;
+  max-height: 100%;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.getStarted .imgContainer{
+  position: relative;
+}
+.grp1{
+  position: absolute;
+  left: 10%;
+  height: 100%;
+}
+
+.grp2{
+  position: absolute;
+  height: 100%;
+  right: 10%;
+  top: 0;
+}
+
+.img2{
+
+  position: absolute;
+  bottom: 0;
+}
+
+.img4{
+
+  position: absolute;
+  bottom: 0;
+}
+
+.getStarted .containergetStarted .head {
+  text-align:center;
+  margin: 0 0 0 35px;
+}
+.getStarted .containergetStarted .head h2{
+  color: #004f83;
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.getStarted .btn{
+  width: 100%;
+  margin-top: 40px;
+}
+
+.getStarted .btn button{
+  box-shadow: 0 1px 10px #999;
+  color: white;
+  background: #004f83;
+  border: 2px solid #004f83;
+  font-size: 20px;
+  padding: 0 8px;
+  border-radius: 20px;
+}
+.getStarted .btn button:hover{
+  background: #0067ac;
+  border: 2px solid #0067ac;
+}
+
+.grp1 span,
+.grp2 span{
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 142px;
+  height: 87px;
+  background: #e4e9f7;
+  z-index: 0;
+  border-radius:3px;
+}
+/* === Images -End- === */
+
+
+

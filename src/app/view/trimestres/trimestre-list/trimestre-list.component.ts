@@ -8,6 +8,8 @@ import {TrimestreService} from "src/app/controler/service/trimestre.service";
   styleUrls: ['./trimestre-list.component.css']
 })
 export class TrimestreListComponent implements OnInit{
+
+  searchText:any;
   constructor(private trimestreService: TrimestreService) { }
   ngOnInit(): void {
     this.findAll();

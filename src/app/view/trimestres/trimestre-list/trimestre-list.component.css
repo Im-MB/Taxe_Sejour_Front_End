@@ -13,6 +13,41 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
+/*----Search Bar----*/
+.container-search{
+  padding: 10px 5px 20px;
+}
+
+.container-search .form{
+  position: relative;
+}
+
+.container-search .form .fa-search{
+  position: absolute;
+  top:13px;
+  left: 20px;
+  color: #9ca3af;
+
+}
+
+.container-search .form span{
+  position: absolute;
+  right: 17px;
+  top: 13px;
+  padding: 2px;
+  border-left: 1px solid #d1d5db;
+}
+
+.container-search .form-input{
+  height: 45px;
+  text-indent: 33px;
+  border-radius: 10px;
+}
+
+.container-search .form-input:focus{
+  box-shadow: none;
+  border: solid 2px rgba(0,79,131,40%);
+}
 
 /*----Infos Table----*/
 .container .card{
@@ -26,7 +61,7 @@ body{
   color: white;
 }
 .container{
-  padding: 50px 0 0;
+  padding: 0 40px;
   max-height: 100%;
   overflow: scroll;
 }
