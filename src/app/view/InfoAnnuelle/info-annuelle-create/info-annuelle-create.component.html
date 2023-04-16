@@ -103,7 +103,7 @@
           <div class="headers"  *ngIf=" selectedInfo.ref === aInfoo.ref">
             <p>Chiffre D'Affaire :</p>
             <p class="infos" *ngIf="selectedInfo.majoration == 0.5">{{ aInfoo.total /0.5 }}</p>
-            <p class="infos" *ngIf="selectedInfo.majoration == 0">0</p>
+            <p class="infos" *ngIf="selectedInfo.majoration == 0">{{ aInfoo.total }}</p>
           </div>
         </div>
         <div class="headers">
