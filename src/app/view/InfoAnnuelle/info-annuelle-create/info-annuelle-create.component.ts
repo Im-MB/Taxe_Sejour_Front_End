@@ -84,7 +84,7 @@ export class InfoAnnuelleCreateComponent implements OnInit {
         alert('DATE PROBLEM');
         console.log('DATE PROBLEM');
       } if(data == -6){
-        alert('PAYMENT PROBLEM');
+        alert("L'un Des Trimestre n'est pas payee");
         console.log('PAYMENT PROBLEM');
       } if(data == -7){
         alert('INFO RECU PROBLEM');
@@ -93,12 +93,10 @@ export class InfoAnnuelleCreateComponent implements OnInit {
     });
   }
 //---------------
-
   public payement(annuelle:any){
-    this.annuelleService.payement(annuelle).subscribe((total)=> {
+    this.annuelleService.payement(annuelle).subscribe((total:number)=> {
       this.total = total})
   }
-
 //---------------
   public infoAnnuelle() {
     this.annuelleService.infoAnnuelle().subscribe((data) => this.annuelleInfos = data);

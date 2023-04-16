@@ -11,12 +11,12 @@ import {environment} from "src/environments/environment";
 export class AnnuelleService {
   private _annuelle: Annuelle | undefined ;
   private _annuelleAr: Array<Annuelle> | undefined;
-  private url = environment.baseUrl + 'InfoAnnuelle/' ;//http://localhost:8036/api/v1/InfoAnnuelle/
+  //private url = environment.baseUrl + 'InfoAnnuelle/' ;//http://localhost:8036/api/v1/InfoAnnuelle/
   private url3 = environment.baseUrl + 'taxeAnnuelle/';
   constructor(private http: HttpClient) { }
 
   public save(): Observable<number>{
-    return this.http.post<number>(this.url,this.annuelle);
+    return this.http.post<number>(this.url3,this.annuelle);
   }
   //-------------
   //-------------
